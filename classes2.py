@@ -41,7 +41,7 @@ class Vehicle:
     #--------------------------------------
 
     def drive(self):
-        return f"{self.__name} is driving!"
+        return f"{self.__name} is driving!!"
 
     def drift(self):
         return f"{self.__name} is drifting!!"
@@ -55,15 +55,12 @@ class Bus(Vehicle):
     def __init__(self, brand : str, name : str, color : str, capacity : int, plate_number : str, wight : int):
         super().__init__(brand, name, color, capacity, plate_number)
         self.wight = wight
-    
-    def drive(self):
-        return f"{self.get_name} is driving!"
 
-    def drift(self):
-        return f"{self.get_name} is drifting!!"
+    def stop(self):
+        return f"{self.get_name()} is stoping!!"
 
-    def carry_cargo(self):
-        return f"{self.get_name} is carrying cargo!!"
+    def full(self):
+        return f"{self.get_name()} is Full!!"
 
 class Truck(Vehicle):
     
@@ -71,15 +68,8 @@ class Truck(Vehicle):
         super().__init__(brand, name, color, capacity, plate_number)
         self.hight = hight
 
-    def drive(self):
-        return f"{self.get_name} is driving!"
-
-    def drift(self):
-        return f"{self.get_name} is drifting!!"
-
-    def carry_cargo(self):
-        return f"{self.get_name} is carrying cargo!!"
-
+    def load(self):
+        return f"{self.get_name()} is loading!!"
 
 car = Vehicle("toyota","supra","white",2,"gta2030")
 
@@ -97,5 +87,31 @@ truck.set_color("white")
 truck.set_capacity(2)
 truck.set_plate_number("tuk8050")
 
-print(car.get_brand())
-print(bus.wight)
+print(f"{car.get_brand()} \n{car.get_name()} \n{car.get_color()} \n{car.get_capacity()} \n{car.get_plate_number()}")
+
+print("---"*10)
+
+print(f"{bus.get_brand()} \n{bus.get_name()} \n{bus.get_color()} \n{bus.get_capacity()} \n{bus.get_plate_number()}")
+
+print("---"*10)
+
+print(f"{truck.get_brand()} \n{truck.get_name()} \n{truck.get_color()} \n{truck.get_capacity()} \n{truck.get_plate_number()}")
+
+print("---"*10)
+
+print(car.drive())
+print(car.drift())
+
+print("---"*10)
+
+print(bus.drive())
+print(bus.stop())
+print(bus.full())
+print(bus.drive())
+
+print("---"*10)
+
+print(truck.drive())
+print(truck.load())
+print(truck.carry_cargo())
+print(truck.drive())
