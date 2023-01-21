@@ -21,7 +21,7 @@
 
 ### for each of the properties do a setter & getter (encabsulate the data).
 
-### Create tow other subclasses (inherit from vehicle):
+### Create two other subclasses (inherit from vehicle):
 - Bus
 - Truck
 
